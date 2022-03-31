@@ -11,14 +11,7 @@ const { SubMenu } = Menu;
 
 const SideMenu = () => {
   const [openKeys, setOpenKeys] = useState(['analytics']);
-
   
-
-  const rootSubmenuKeys = ['analytics','admin', 'knowledge', 'train', 'agent', ];
-
-  const handleClick = e => {
-    setCurrent({ current: e.key });
-  };
 
   return (
     <>
@@ -29,7 +22,7 @@ const SideMenu = () => {
       <Menu
         mode="inline"
         defaultSelectedKeys={['13']}
-        defaultOpenKeys={['analytics']}
+        defaultOpenKeys={openKeys}
         className="sidebar-menu"
       >
         <SubMenu title="Admin" key="admin" icon={<UsergroupAddOutlined />}>
